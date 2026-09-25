@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON CHESS - 80's Retro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="neon-container">
+        <h1 class="neon-title">⚡ NEON CHESS ⚡</h1>
+        <div class="controls">
+            <div class="bot-selector">
+                <label for="botSelect">CHOOSE YOUR OPPONENT:</label>
+                <select id="botSelect" class="neon-select">
+                    <option value="0">🤖 ROOKIE - Skill Lvl 1</option>
+                    <option value="1">👾 NOVICE - Skill Lvl 2</option>
+                    <option value="2">🎮 INTERMEDIATE - Skill Lvl 3</option>
+                    <option value="3">💀 EXPERT - Skill Lvl 4</option>
+                    <option value="4">🔥 LEGEND - Skill Lvl 5</option>
+                </select>
+                <button id="startBtn" class="neon-btn">START GAME</button>
+                <button id="resetBtn" class="neon-btn reset">RESET</button>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="info-panel">
+                <div class="player-info">
+                    <h3>YOU (WHITE)</h3>
+                    <p id="playerStatus">Waiting to start...</p>
+                </div>
+                <div class="divider"></div>
+                <div class="player-info">
+                    <h3 id="botName">ROOKIE</h3>
+                    <p id="botStatus">Ready to compete...</p>
+                </div>
+            </div>
+
+            <div id="board" class="chess-board"></div>
+
+            <div class="move-log">
+                <h4>MOVE LOG</h4>
+                <div id="moves" class="moves-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chess.js"></script>
+    <script src="bot.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
